@@ -27,71 +27,26 @@ class SpecificationTest extends \PHPUnit_Framework_TestCase
      */
     public static function provider()
     {
+        $true  = new TrueSpecification();
+        $false = new FalseSpecification();
+
         return array(
-            array(
-                new TrueSpecification(),
-                true
-            ),
-            array(
-                new FalseSpecification(),
-                false
-            ),
-            array(
-                (new TrueSpecification())->not(),
-                false
-            ),
-            array(
-                (new FalseSpecification())->not(),
-                true
-            ),
-            array(
-                (new TrueSpecification())->orX(new TrueSpecification()),
-                true
-            ),
-            array(
-                (new TrueSpecification())->orX(new FalseSpecification()),
-                true
-            ),
-            array(
-                (new FalseSpecification())->orX(new TrueSpecification()),
-                true
-            ),
-            array(
-                (new FalseSpecification())->orX(new FalseSpecification()),
-                false
-            ),
-            array(
-                (new TrueSpecification())->andX(new TrueSpecification()),
-                true
-            ),
-            array(
-                (new TrueSpecification())->andX(new FalseSpecification()),
-                false
-            ),
-            array(
-                (new FalseSpecification())->andX(new TrueSpecification()),
-                false
-            ),
-            array(
-                (new FalseSpecification())->andX(new FalseSpecification()),
-                false
-            ),
-            array(
-                (new FalseSpecification())->orX((new FalseSpecification())->not()),
-                true
-            ),
-            array(
-                (new FalseSpecification())->orX((new TrueSpecification())->andX(new TrueSpecification())),
-                true
-            ),
-            array(
-                (new FalseSpecification())->orX((new FalseSpecification())->andX(new TrueSpecification())),
-                false
-            ),
-            array(
-                (new TrueSpecification())->andX((new FalseSpecification())->orX(new TrueSpecification())),
-                true
-            )
+            array($true, true),
+            array($false, false),
+            array($true->not(), false),
+            array($false->not(), true),
+            array($true->orX($true), true),
+            array($true->orX($false), true),
+            array($false->orX($true), true),
+            array($false->orX($false), false),
+            array($true->andX($true), true),
+            array($true->andX($false), false),
+            array($false->andX($true), false),
+            array($false->andX($false), false),
+            array($false->orX($false->not()), true),
+            array($false->orX($true->andX($true)), true),
+            array($false->orX($false->andX($true)), false),
+            array($true->andX($false->orX($true)), true)
         );
     }
 
