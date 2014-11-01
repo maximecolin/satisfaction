@@ -8,6 +8,12 @@ Satisfaction is a PHP implementation of the Specification pattern for DDD.
 
 The aim of the specification pattern is to write domain specifications in reusable classes instead of dispatching domain rules conditons in all your project.
 
+##Installation
+
+```
+composer require maximecolin/satisfaction
+```
+
 ##Usage
 
 ###Simple example
