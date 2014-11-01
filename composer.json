@@ -1,6 +1,7 @@
 {
-    "name": "satisfaction/satisfaction",
+    "name": "maximecolin/satisfaction",
     "type": "library",
+    "version": "1.0.0",
     "description": "A PHP implementation of the specification pattern for DDD",
     "keywords": ["ddd", "specification", "pattern"],
     "homepage": "http://www.maximecolin.fr",
@@ -19,10 +20,5 @@
     },
     "autoload": {
         "psr-0": { "Satisfaction": "src/" }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
     }
 }
