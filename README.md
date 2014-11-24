@@ -20,7 +20,7 @@ composer require maximecolin/satisfaction
 
 My model :
 
-```
+```php
 class Article
 {
 	public $published = false;
@@ -30,7 +30,7 @@ class Article
 
 My specification :
 
-```
+```php
 class PublishedArticle extends CompositeSpecification
 {
 	public function isSatisfiedBy($article)
@@ -42,7 +42,7 @@ class PublishedArticle extends CompositeSpecification
 
 I want to know if an article is published :
 
-```
+```php
 $specicification = new PublishedArticle();
 
 if ($specification->isSatisfiedBy($article)) {
@@ -54,14 +54,14 @@ if ($specification->isSatisfiedBy($article)) {
 
 You can chain specifications with "or", "and" or "not" condition.
 
-```
+```php
 // If both foo and bar are satified
 if ((new FooSpecification())->andX(new BarSpecification())->isSatifiedBy($object)) {
 	// Do something
 }
 ```
 
-```
+```php
 // If foo is satisfied or bar is not
 if ((new FooSpecification())->orX((new BarSpecification())->not())->isSatifiedBy($object)) {
 	// Do something
