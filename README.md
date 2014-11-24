@@ -56,14 +56,14 @@ You can chain specifications with "or", "and" or "not" condition.
 
 ```
 // If both foo and bar are satified
-if ((new FooSpecification())->andX(new BarSpecfication())->isSatifiedBy($object)) {
+if ((new FooSpecification())->andX(new BarSpecification())->isSatifiedBy($object)) {
 	// Do something
 }
 ```
 
 ```
 // If foo is satisfied or bar is not
-if ((new FooSpecification())->orX((new BarSpecfication())->not())->isSatifiedBy($object)) {
+if ((new FooSpecification())->orX((new BarSpecification())->not())->isSatifiedBy($object)) {
 	// Do something
 }
 ```
