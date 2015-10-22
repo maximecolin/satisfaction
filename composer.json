@@ -1,7 +1,7 @@
 {
     "name": "maximecolin/satisfaction",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A PHP implementation of the specification pattern for DDD",
     "keywords": ["ddd", "specification", "pattern"],
     "homepage": "http://www.maximecolin.fr",
