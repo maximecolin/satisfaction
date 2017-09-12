@@ -1,22 +1,22 @@
-#Satisfaction
+# Satisfaction
 
 Satisfaction is a PHP implementation of the Specification pattern for DDD.
 
 [![Build Status](https://travis-ci.org/maximecolin/satisfaction.svg)](https://travis-ci.org/maximecolin/satisfaction)
 
-##Purpose
+## Purpose
 
 The aim of the specification pattern is to write domain specifications in reusable classes instead of dispatching domain rules conditons in all your project.
 
-##Installation
+## Installation
 
 ```
 composer require maximecolin/satisfaction
 ```
 
-##Usage
+## Usage
 
-###Simple example
+### Simple example
 
 My model :
 
@@ -68,14 +68,14 @@ if ((new FooSpecification())->orX((new BarSpecification())->not())->isSatifiedBy
 }
 ```
 
-##Author
+## Author
 
 Maxime Colin <www.maximecolin.fr>
 
-##Licence
+## Licence
 
 See the LICENCE file.
 
-##Acknowledgements
+## Acknowledgements
 
 Thanks to Jean-François Lépine for his talk about DDD.
