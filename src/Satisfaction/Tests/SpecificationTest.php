@@ -11,14 +11,14 @@
 
 namespace Satisfaction\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Satisfaction\Tests\Fixtures\TrueSpecification;
 use Satisfaction\Tests\Fixtures\FalseSpecification;
-use Satisfaction\Tests\Fixtures\Object;
 
 /**
  * Specification test
  */
-class SpecificationTest extends \PHPUnit_Framework_TestCase
+class SpecificationTest extends TestCase
 {
     /**
      * Data provider
@@ -57,7 +57,7 @@ class SpecificationTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsStatifiedBy($specification, $expected)
     {
-        $object = new Object();
+        $object = new \stdClass();
 
         $this->assertEquals($expected, $specification->isSatisfiedBy($object));
     }

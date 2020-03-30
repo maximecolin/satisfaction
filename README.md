@@ -31,6 +31,8 @@ class Article
 My specification :
 
 ```php
+use Satisfaction\CompositeSpecification;
+
 class PublishedArticle extends CompositeSpecification
 {
 	public function isSatisfiedBy($article)
