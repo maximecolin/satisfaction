@@ -19,6 +19,6 @@
         "phpunit/phpunit": "4.3.*"
     },
     "autoload": {
-        "psr-0": { "Satisfaction": "src/" }
+        "psr-4": { "Satisfaction\\": "src/" }
     }
 }
