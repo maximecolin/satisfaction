@@ -11,13 +11,14 @@
 
 namespace Satisfaction\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Satisfaction\Tests\Fixtures\TrueSpecification;
 use Satisfaction\Tests\Fixtures\FalseSpecification;
 
 /**
  * Specification test
  */
-class SpecificationTest extends \PHPUnit_Framework_TestCase
+class SpecificationTest extends TestCase
 {
     /**
      * Data provider
