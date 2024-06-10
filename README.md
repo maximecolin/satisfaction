@@ -57,15 +57,15 @@ if ($specification->isSatisfiedBy($article)) {
 You can chain specifications with "or", "and" or "not" condition.
 
 ```php
-// If both foo and bar are satified
-if ((new FooSpecification())->andX(new BarSpecification())->isSatifiedBy($object)) {
+// If both foo and bar are satisfied
+if ((new FooSpecification())->andX(new BarSpecification())->isSatisfiedBy($object)) {
 	// Do something
 }
 ```
 
 ```php
 // If foo is satisfied or bar is not
-if ((new FooSpecification())->orX((new BarSpecification())->not())->isSatifiedBy($object)) {
+if ((new FooSpecification())->orX((new BarSpecification())->not())->isSatisfiedBy($object)) {
 	// Do something
 }
 ```
